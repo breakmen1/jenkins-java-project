@@ -1,6 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>in.RAHAM</groupId>
@@ -12,7 +11,7 @@
 
     <properties>
         <docker.image.prefix>kammana</docker.image.prefix>
-    </properties>
+    </properties>    
 
     <dependencies>
         <!-- Updated JUnit dependency to JUnit 4 -->
@@ -23,12 +22,13 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Additional dependencies -->
+        <!-- Your other dependencies -->
         <dependency>
             <groupId>com.oracle.bedrock</groupId>
             <artifactId>bedrock-runtime-maven</artifactId>
             <version>5.1.2</version>
         </dependency>
+
     </dependencies>
 
     <distributionManagement>
@@ -51,5 +51,6 @@
         </pluginRepository>
     </pluginRepositories>
 </project>
+
 
 
