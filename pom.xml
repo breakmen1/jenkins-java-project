@@ -7,10 +7,12 @@
 	<version>1.2.2</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
-	
+
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
-	</properties>	
+		<java.version>11</java.version>
+	</properties>
+
 	<dependencies>
 		<dependency>
 		    <groupId>com.oracle.bedrock</groupId>
@@ -21,35 +23,46 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>3.8.1</version>
+			<version>4.13.2</version>
 			<scope>test</scope>
 		</dependency>
-
 	</dependencies>
-	
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>11</source>
+					<target>11</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<distributionManagement>
-		 <snapshotRepository>
+		<snapshotRepository>
 		    <id>nexusRepo</id>
 		    <url>http://13.233.230.166:8081/repository/maven-snapshots/</url>
-		 </snapshotRepository>
+		</snapshotRepository>
 		
 		<repository>
 		    <id>nexusRepo</id>
 		    <url>http://13.233.230.166:8081/repository/maven-releases/</url>
 		</repository>
-  	</distributionManagement>
-	
+	</distributionManagement>
+
 	<pluginRepositories>
-	    <pluginRepository>    
-		<id>maven1</id>
-		<name>Maven.org</name>
-		<url>http://repo1.maven.org/maven2</url>
-	    </pluginRepository>
+		<pluginRepository>
+			<id>maven1</id>
+			<name>Maven.org</name>
+			<url>http://repo1.maven.org/maven2</url>
+		</pluginRepository>
 	</pluginRepositories>
 
-	
 </project>
-
 
 
 
